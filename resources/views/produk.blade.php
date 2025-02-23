@@ -181,9 +181,10 @@
         <h1>Sagara Tungkal</h1>
         <button class="menu-toggle">&#9776;</button>
         <div class="nav">
-            <a href="{{route('dashboard')}}">Halaman Utama</a>
-            <a href="{{route('produk')}}">Daftar Produk</a>
-            <a href="{{route('pembelian.index')}}">Pembelian</a>
+            <a href="{{ route('dashboard') }}">Halaman Utama</a>
+            <a href="{{ route('produk') }}">Daftar Produk</a>
+            <a href="{{ route('pembelian.index') }}">Pembelian</a>
+            <a href="#">Kontak</a>
         </div>
     </div>
 

@@ -57,7 +57,7 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: url('asset/jembatan.jpg') no-repeat center 30% /cover;
+            background: url('assets/img/jembatan.jpg') no-repeat center 30% /cover;
             opacity: 80%;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -303,48 +303,54 @@
         <h1>Sagara Tungkal</h1>
         <button class="menu-toggle">&#9776;</button>
         <div class="nav">
-            <a href="{{route('dashboard')}}">Halaman Utama</a>
-            <a href="{{route('produk')}}">Daftar Produk</a>
-            <a href="{{route('pembelian.index')}}">Pembelian</a>                            
-            <!-- <a href="#">Pembelian</a> -->
+            <a href="{{ route('dashboard') }}">Halaman Utama</a>
+            <a href="{{ route('produk') }}">Daftar Produk</a>
+            <a href="{{ route('pembelian.index') }}">Pembelian</a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                </svg>
+            </a>
+
         </div>
     </div>
 
-    <div id="Halaman Utama"class="hero">
+    <div class="hero">
         <h1>Sagara Tungkal</h1>
         <h2>Seafood Fresh dari Tungkal Jambi</h2>
         <p>Sagara Tungkal mempermudah akses seafood segar dari perairan Tungkal<br>
         dengan sistem pemesanan online dan pengiriman cepat. <br>
         bisa mendapatkan hasil laut berkualitas tanpa harus datang ke pelabuhan atau pasar.</p>
-        </div>
+    </div>
 
-        <div id="produk"class="container">
+    <div class="container">
         <h2>Seafood Terlaris</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src='asset/ikan_kakap.jpg' alt="Ikan Kakap">
+                <img src='assets/img/Ikan_kakap.jpg' alt="Ikan Kakap">
                 <h3>Ikan Kakap</h3>
                 <p>Rp 50.000 / kg</p>
             </div>
             <div class="product-card">
-                <img src='asset/Anadara_granosa.jpg' alt="Kerang Dara">
+                <img src='assets/img/Anadara_granosa.jpg' alt="Kerang Dara">
                 <h3>Kerang Dara</h3>
+                <p>Rp 75.000 / kg</p>
+            </div>
+            <div class="product-card">
+                <img src='assets/img/cumi-cumi.jpg' alt="Cumi-Cumi">
+                <h3>Cumi-Cumi</h3>
                 <p>Rp 65.000 / kg</p>
             </div>
             <div class="product-card">
-                <img src='asset/cumi-cumi.jpg' alt="Cumi-Cumi">
-                <h3>Cumi-Cumi</h3>
-                <p>Rp 57.000 / kg</p>
-            </div>
-            <div class="product-card">
-                <img src='asset/kepiting.jpg' alt="Kepiting">
+                <img src='assets/img/kepiting.jpg' alt="Kepiting">
                 <h3>Kepiting</h3>
-                <p>Rp 60.000 / kg</p>
+                <p>Rp 65.000 / kg</p>
             </div>
         </div>
     </div>
 
-    <div id="kontak" class="contact-container">
+    <div class="contact-container">
     <h2>Kontak Kami</h2>
     <div class="contact-grid">
         <!-- Peta Google Maps -->
@@ -366,17 +372,17 @@
     </div>
 </div>
 
-
     <!-- Footer -->
     <footer class="footer">
     <div class="footer-content">
         <div class="footer-brand">
-            <img src="asset/SAGARA TUNGKAL.png" alt="Logo Sagara Tungkal" class="footer-logo">
+            <img src="assets/img/SAGARA TUNGKAL.png" alt="Logo Sagara Tungkal" class="footer-logo">
             <span class="footer-company-name">Sagara Tungkal</span>
         </div>
         <p>&copy; 2025 Sagara Tungkal. All Rights Reserved.</p>
     </div>
     </footer>
+
 
     <script>
         document.querySelector(".menu-toggle").addEventListener("click", function() {
@@ -386,5 +392,4 @@
 
 </body>
 </html>
-
 </x-app-layout>
