@@ -75,7 +75,7 @@ class PembelianController extends Controller
     public function edit(string $id)
     {
     $pembelian = Pembelian::find($id);
-    return view("pembelian.edit", ["pembelian" => $pembelian]);
+    return view("edit", ["pembelian" => $pembelian]);
     }
 
 
@@ -84,13 +84,24 @@ class PembelianController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        Student::find($id)->update([
-            "produk" => $request->produk,
-            "no" => $request->no,
-            "harga" => $request->harga,
-            "jumlah" => $request->jumlah,
-            "total_harga" => $request->total_harga
-        ]);
+        $harga = 0; // Default harga
+
+    if ($request->produk == 'Kerang Dara') {
+        $harga = 65000;
+    } elseif ($request->produk == 'Cumi-Cumi') {
+        $harga = 57000;
+    } elseif ($request->produk == 'Kepiting') {
+        $harga = 60000;
+    } elseif ($request->produk == 'Udang') {
+        $harga = 35000;
+    }
+    
+    Pembelian::find($id)->update([
+        "produk" => $request->produk,
+        "harga" => $harga,
+        "jumlah" => $request->jumlah,
+        "total_harga" => $harga * $request->jumlah
+    ]);
     
         return redirect()->route("pembelian.index");
     }
